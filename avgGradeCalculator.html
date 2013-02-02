@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Finding the Average Grade</title>
+<link href="" rel="stylesheet">
+<style>
+</style>
+<script>
+
+var studentGrades=[
+                  ["Gemma", 90],
+                  ["Spencer", 88],
+                  ["Raine", 92],
+                  ["Kelly", 77],
+                  ["Annabel", 77],
+                  ["Anna", 93],
+                  ["Minsaw", 96],
+                  ["Lillie", 83],
+                  ["Avery", 81],
+                  ["Bradie", 91]
+ ];
+var sum=0
+
+function calcAverage(scores){
+  for(var i=[0]; i < scores.length; i++){
+    sum+=(scores[i][1]);
+  }
+  var average=(sum / 10);
+
+  return average
+
+}
+
+var averageScore=(calcAverage(studentGrades));
+
+function convertGrade(averageScore){
+  var letter 
+  if (averageScore < 60){
+    letter="F";
+    console.log(letter);
+  }
+  else if (averageScore < 70){
+    letter="D";
+  }
+
+  else if (averageScore< 80){
+    letter ="C";
+  }
+  else if (averageScore< 90){
+    letter ="B";
+  }
+
+  else if (averageScore<100){
+    letter ="A";
+  }
+return letter;
+  
+  }
+
+</script>
+
+<body>
+
+<header> <h1>Calculating the Class Average</h1></header>
+
+<div>
+  <h3> Test 1 Grades</h3>
+  <p>
+  <script>
+  for(var i=[0]; i < studentGrades.length; i++){
+    document.write(studentGrades[i][0] + ", " + studentGrades[i][1] + "<br/>");
+    }
+  </script>
+  </p>
+
+<p><strong>
+  <script>
+document.write("Average grade: " + averageScore + "<br/>");
+
+document.write("Letter grade: " + convertGrade(averageScore));
+  </script>
+  </strong></p>
+</div>
+
+</body>
+</html>
